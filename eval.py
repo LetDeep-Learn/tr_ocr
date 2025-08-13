@@ -4,7 +4,7 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 import os
 import config
-from dataset import get_datasets
+from dataset import get_dataset
 from model import load_model
 from utils import load_checkpoint
 
@@ -30,7 +30,7 @@ def evaluate(model, dataloader, processor):
 
 def main():
     # Load dataset (you can make a test split here if you want)
-    dataset, processor = get_datasets(split="test")  # make sure your get_datasets supports split
+    dataset, processor = get_dataset(split="test")  # make sure your get_datasets supports split
     dataloader = DataLoader(dataset, batch_size=1, shuffle=False)
 
     # Load model
