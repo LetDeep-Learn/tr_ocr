@@ -1,9 +1,13 @@
 # train.py
 import torch
 from torch.utils.data import DataLoader
-from transformers import AdamW, get_scheduler
+from transformers import get_scheduler
+from torch.optim import AdamW
+
 from tqdm import tqdm
 import os
+import evaluate
+
 import config
 from dataset import get_dataset
 from model import load_model, freeze_encoder, unfreeze_last_n_encoder_layers

@@ -36,7 +36,7 @@ def save_checkpoint(model, processor, epoch, name="checkpoint"):
 
     print(f"[INFO] Saved checkpoint to {save_path}")
 
-def load_last_checkpoint(model_cls, processor_cls):
+def load_checkpoint(model_cls, processor_cls):
     """
     Load the most recent checkpoint from DRIVE_SAVE_DIR.
     Returns: (model, processor, last_epoch) or (None, None, 0) if not found.
